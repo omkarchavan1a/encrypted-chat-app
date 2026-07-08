@@ -3,6 +3,6 @@
   "outputDirectory": "frontend/dist",
   "framework": "vite",
   "env": {
-    "VITE_API_URL": "@api_url"
+    "VITE_API_URL": "https://encrypted-chat-app-omkar.up.railway.app/"
   }
 }
