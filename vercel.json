@@ -1,9 +1,3 @@
 {
-  "installCommand": "npm ci",
-  "buildCommand": "npm run build",
-  "outputDirectory": "frontend/dist",
-  "framework": "vite",
-  "env": {
-    "VITE_API_URL": "https://encrypted-chat-app-omkar.up.railway.app/"
-  }
+  "note": "Vercel configuration removed — project migrated to Railway."
 }
