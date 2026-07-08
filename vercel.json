@@ -1,0 +1,9 @@
+{
+  "buildCommand": "npm ci -w frontend && npm run build -w frontend",
+  "outputDirectory": "frontend/dist",
+  "installCommand": "npm ci",
+  "framework": "vite",
+  "env": {
+    "VITE_API_URL": "@api_url"
+  }
+}
