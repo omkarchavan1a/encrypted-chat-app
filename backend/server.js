@@ -20,10 +20,18 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// MongoDB Connection
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/encrypted-chat', {
+// MongoDB Connection with error handling
+const mongoUri = process.env.MONGODB_URI || process.env.DATABASE_URL || 'mongodb://localhost:27017/encrypted-chat';
+console.log('Connecting to MongoDB:', mongoUri.replace(/(:\/\/)([^:]+):([^@]+)@/, '$1****:****@'));
+
+mongoose.connect(mongoUri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
+}).then(() => {
+  console.log('✓ MongoDB connected successfully');
+}).catch((err) => {
+  console.error('✗ MongoDB connection error:', err.message);
+  process.exit(1);
 });
 
 // Routes
