@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "dev": "concurrently \"npm run dev -w backend\" \"npm run dev -w frontend\"",
-    "build": "npm ci -w backend && npm ci -w frontend && npm run build -w frontend",
+    "build": "npm run build -w frontend",
     "start": "npm start -w backend"
   },
   "devDependencies": {
