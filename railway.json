@@ -1,17 +1,3 @@
 {
-  "version": "0.0.1",
-  "services": [
-    {
-      "name": "backend",
-      "source": "./backend",
-      "buildCommand": "npm install",
-      "startCommand": "npm start"
-    },
-    {
-      "name": "frontend",
-      "source": "./frontend",
-      "buildCommand": "npm install && npm run build",
-      "startCommand": "npm run preview"
-    }
-  ]
+  "note": "Repository uses a monorepo. Configure backend and frontend services separately in Railway UI. Remove or replace this file if Railway raises schema errors."
 }
